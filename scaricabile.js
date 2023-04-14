@@ -128,6 +128,7 @@ const jobs = [
   },
 ];
 
+//! PARTE 1
 // l'intera funzione punta a cercare in un array in base a delle keywords impostate dall'utente per filtrare i risultati e mostrare a schermo le inserzioni desiderate;
 function jobSearch() {
   let result = [];
@@ -163,6 +164,7 @@ function jobSearch() {
   console.log(result);
   console.log(`${count} risultati trovati`);
 
+  //! PARTE 2
   // il seguente ciclo 'for' itera l'array d'appoggio creata precedentemente e crea nuovi elementi inserendoli nell'ul e facendo visualizzare il risultato all'utente;
   for (let i = 0; i < result.length; i++) {
     output.innerHTML +=

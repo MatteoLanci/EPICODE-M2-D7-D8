@@ -128,6 +128,7 @@ const jobs = [
   },
 ];
 
+// l'intera funzione punta a cercare in un array in base a delle keywords impostate dall'utente per filtrare i risultati e mostrare a schermo le inserzioni desiderate;
 function jobSearch() {
   let result = [];
   let count = 0;
@@ -137,6 +138,7 @@ function jobSearch() {
   let titleKeyword = document.getElementById("titleInput").value;
   let locationKeyword = document.getElementById("locationInput").value;
 
+  // il seguente ciclo 'if' esegue un controllo di integrità per i campi di input dove se sono vuoti non permette alcuna ricerca mostrando un alert relativo;
   if (titleKeyword == "" && locationKeyword == "") {
     outMsg.innerHTML =
       "Devi compilare i campi di ricerca per ottenere un risultato";
@@ -144,6 +146,7 @@ function jobSearch() {
     return;
   }
 
+  // il seguente ciclo 'for' itera l'array jobs per confermare o meno se il valore negli input immessi dall'utente sono inclusi nei valori delle rispettive keys dell'array, pushando il risultato in un array di appoggio che viene stampato in console mostrando i soli risultati che includono i valori cercati dall'utente. Inoltre in console viene stampato anche la lunghezza di questo array d'appoggio, il cui valore viene associato alla variabile 'count', quindi mostra il numero di inserzioni trovate in base alla ricerca.
   for (let i = 0; i < jobs.length; i++) {
     titleKeyword = titleKeyword.toLowerCase();
     locationKeyword = locationKeyword.toLowerCase();
@@ -160,6 +163,7 @@ function jobSearch() {
   console.log(result);
   console.log(`${count} risultati trovati`);
 
+  // il seguente ciclo 'for' itera l'array d'appoggio creata precedentemente e crea nuovi elementi inserendoli nell'ul e facendo visualizzare il risultato all'utente;
   for (let i = 0; i < result.length; i++) {
     output.innerHTML +=
       "<li class='myLi' >" +
@@ -169,8 +173,10 @@ function jobSearch() {
       "</li>";
   }
 
+  // questa proprietà permette di svuotare i campi di input automaticamente al momento dell'attivazione della funzione;
   myForm.reset();
 
+  // questo ciclo 'if' permette di avere un messaggio diverso in base se il risultato ha un solo elemento o più di uno;
   if (result.length > 1 || result.length == 0) {
     outMsg.innerHTML = `Ho trovato ${count} risultati dalla tua ricerca ( ${titleKeyword} ${locationKeyword} )`;
   } else {
@@ -178,6 +184,7 @@ function jobSearch() {
   }
 }
 
+// questa funzione associata ad un secondo button consente di mostrare all'utente tutte le inserzioni disponibili nell'array principale, con relativo messaggio di avviso;
 let btnShowAll = document.getElementById("btnShowAll");
 let output1 = document.querySelector("#output");
 let outMsg = document.querySelector("#outputMsg");
@@ -198,6 +205,7 @@ btnShowAll = btnShowAll.addEventListener("click", function () {
   console.log(count);
 });
 
+// questa funzione associata ad un terzo button permette di resettare l'intera pagina e permettere una nuova ricerca;
 function clearAll() {
   let output = document.querySelector("#output");
   let outMsg = document.querySelector("#outputMsg");

@@ -16,7 +16,7 @@
     <title>JobFinder | Matteo Lanci</title>
   </head>
   <body>
-    <!--? HEADER - NAVBAR -->
+    <!--?----------------------------------------- HEADER - NAVBAR -->
     <header>
       <div class="logo">
         <a href="#"
@@ -33,24 +33,23 @@
       </div>
     </header>
 
-    <!--? MAIN SECTION -->
+    <!--?----------------------------------------- MAIN SECTION -->
     <main>
       <div class="main-container">
-        <!--   <div class="main-head">
-          <h1>JobFinder</h1>
-          <h4>le tue necessità a portata di click</h4>
-        </div> -->
         <form class="inputForm" action="" id="inputForm">
+          <!--*---------------------- CAMPO INPUT #1 -->
           <div class="input-text">
             <input type="text" class="inputText" id="titleInput" required />
             <label for="titleInput">titolo lavoro</label>
           </div>
 
+          <!--*---------------------- CAMPO INPUT #2 -->
           <div class="input-text">
             <input type="text" class="inputText" id="locationInput" required />
             <label for="locationInput">location lavoro</label>
           </div>
 
+          <!--*---------------------- BUTTON #1 -->
           <input
             type="button"
             class="btn"
@@ -58,20 +57,22 @@
             value="cerca"
             onclick="jobSearch()" />
 
+          <!--*---------------------- BUTTON #2 -->
           <input
             type="button"
             class="btn"
             id="btnShowAll"
             value="Mostra tutti" />
-
+          <!--*---------------------- BUTTON #3 -->
           <input
             type="button"
             class="btn"
             id="clearBtn"
             value="Nuova ricerca"
-            onclick="clearAll();" />
+            onclick="clearAll()" />
         </form>
 
+        <!--TODO----------------------------------- OUTPUT SECTION -->
         <div class="output-wrapper" id="outputWrap">
           <p class="header-output">I risultati verranno mostrati qui:</p>
           <hr class="divider" />
@@ -79,9 +80,10 @@
           <p id="outputMsg"></p>
         </div>
       </div>
+      <!--!----------------------------------- FINE INTERFACCIA UTENTE -->
     </main>
 
-    <!--? FOOTER SECTION -->
+    <!--?----------------------------------------- FOOTER SECTION -->
     <footer>
       <p class="footer-content">
         © 2023

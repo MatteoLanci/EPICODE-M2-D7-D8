@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./assets/jobfinder-favicon.svg" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>JobFinder | Matteo Lanci</title>
+  </head>
+  <body>
+    <!--? HEADER - NAVBAR -->
+    <header>
+      <div class="logo">
+        <a href="#"
+          ><h1>JobFinder</h1>
+          <i class="bx bx-network-chart"></i
+        ></a>
+      </div>
+      <div class="navlinks">
+        <ul>
+          <li><a href="#">Profilo</a></li>
+          <li><a href="#">Impostazioni</a></li>
+          <li><a href="#">Contatti</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <!--? MAIN SECTION -->
+    <main>
+      <div class="main-container">
+        <!--   <div class="main-head">
+          <h1>JobFinder</h1>
+          <h4>le tue necessità a portata di click</h4>
+        </div> -->
+        <form class="inputForm" action="" id="inputForm">
+          <div class="input-text">
+            <input type="text" class="inputText" id="titleInput" required />
+            <label for="titleInput">titolo lavoro</label>
+          </div>
+
+          <div class="input-text">
+            <input type="text" class="inputText" id="locationInput" required />
+            <label for="locationInput">location lavoro</label>
+          </div>
+
+          <input
+            type="button"
+            class="btn"
+            id="searchBtn"
+            value="cerca"
+            onclick="jobSearch()" />
+
+          <input
+            type="button"
+            class="btn"
+            id="btnShowAll"
+            value="Mostra tutti" />
+
+          <input
+            type="button"
+            class="btn"
+            id="clearBtn"
+            value="Nuova ricerca"
+            onclick="clearAll();" />
+        </form>
+
+        <div class="output-wrapper" id="outputWrap">
+          <p class="header-output">I risultati verranno mostrati qui:</p>
+          <hr class="divider" />
+          <ul class="output" id="output"></ul>
+          <p id="outputMsg"></p>
+        </div>
+      </div>
+    </main>
+
+    <!--? FOOTER SECTION -->
+    <footer>
+      <p class="footer-content">
+        © 2023
+        <a
+          class="footer-link"
+          href="https://www.linkedin.com/in/matteolanci/"
+          target="_blank"
+          >Matteo Lanci</a
+        >
+        <span>for</span> EPICODE | Roma - All rights reserved
+      </p>
+    </footer>
+
+    <script src="scaricabile.js"></script>
+  </body>
+</html>

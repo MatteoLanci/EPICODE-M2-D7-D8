@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  user-select: none;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Rubik", sans-serif;
+}
+
+/*!------------------------------------ INIZIO STILE DELL'HEADER */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 6rem;
+  background: linear-gradient(#297ea6, #001829);
+  z-index: 1;
+}
+header .logo a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+  color: #f1f1f1;
+}
+.logo h1 {
+  font-size: 1.6rem;
+}
+.bx {
+  font-size: 1.5rem;
+}
+header .navlinks ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+.navlinks a {
+  color: #f1f1f1;
+  font-weight: 500;
+  position: relative;
+}
+.navlinks a:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #f1f1f1;
+  border-radius: 5px;
+  left: 0;
+  bottom: -8px;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s;
+}
+.navlinks a:hover:after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/*!------------------------------------ INIZIO STILE DEL MAIN SECTION */
+main {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background: url(./assets/bg.svg);
+  background-repeat: repeat;
+}
+.main-container {
+  margin-top: 4rem;
+  margin-bottom: 3rem;
+  width: 95%;
+  max-width: 1000px;
+  height: 100%;
+  border: none;
+  padding: 1rem;
+  gap: 3rem;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #f1f1f120;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 0 5px #f1f1f1;
+}
+
+/**------------------ definizione di stile degli input */
+.inputForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: auto;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.input-text {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-text input {
+  background: transparent;
+  line-height: 2rem;
+  border: none;
+  border-radius: 6px;
+  padding: 0.3rem 0px 0.3rem 0.5rem;
+  width: 200px;
+  outline: none;
+  color: #f1f1f1;
+  font-size: 1.2rem;
+  box-shadow: 0 0 5px #f1f1f1;
+  transition: all 0.3s;
+}
+
+.input-text label {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10px;
+  font-size: 0.8rem;
+  color: #f1f1f1;
+  transition: all 0.3s;
+}
+.input-text input:focus ~ label,
+.input-text input:valid ~ label {
+  position: absolute;
+  top: -15px;
+  background: transparent;
+  color: #f3ac27;
+}
+.input-text input:focus,
+.input-text input:valid {
+  box-shadow: 0 0 5px #f3ac27;
+}
+
+.btn {
+  padding: 0px 0.5rem;
+  border-radius: 6px;
+  outline: none;
+  border: none;
+  line-height: 2rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+  background: #297ea6;
+  color: #f1f1f1;
+  font-weight: 700;
+  transition: 0.2s;
+  box-shadow: 0 0 5px #f1f1f1;
+}
+.btn:hover {
+  background: #205f7c;
+  color: #f3ac27;
+}
+.btn:active {
+  background: #205f7c;
+  color: #000;
+}
+
+/**------------------ definizione di stile della sezione output della funzione */
+main .output-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.header-output {
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: #f1f1f1;
+  padding-bottom: 0.5rem;
+}
+
+.unify {
+  color: #f3ac27;
+  font-weight: 100;
+  font-size: 0.7rem;
+}
+
+.divider {
+  width: 90%;
+}
+
+.output {
+  width: auto;
+  min-width: 300px;
+  height: auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 0.5rem;
+  list-style: decimal;
+}
+.output li {
+  line-height: 2rem;
+  font-size: 0.9rem;
+  color: #f1f1f1;
+}
+
+#outputMsg {
+  color: #f3ac27;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+/*!------------------------------------ INIZIO STILE DEL FOOTER */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 2rem;
+  height: 50px;
+  color: #f1f1f1;
+  font-size: 0.7rem;
+  background: linear-gradient(#001829, #297ea6);
+}
+.footer-content {
+  font-size: 0.8rem;
+  font-weight: 100;
+  position: relative;
+}
+.footer-link {
+  color: #f3ac27;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: all 0.5s;
+}
+.footer-content span {
+  font-size: 0.7rem;
+}
